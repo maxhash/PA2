@@ -18,6 +18,7 @@ list(set=set,get=get,setinverse=setinverse,getinverse=getinverse)
 
 cacheSolve <- function(X, ...) 
 {
+##install corpcor
 if(require("corpcor")){
 	print("corpcor is loaded")
 	} else {
@@ -29,6 +30,7 @@ if(require("corpcor")){
 			stop("corpcor installation failed")
 			}
 		}
+##calculate inverse		
 inverse <- X$getinverse()
 if(!is.null(inverse)){
 	message("matrix is in memory")
